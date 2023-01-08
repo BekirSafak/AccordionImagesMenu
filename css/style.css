@@ -1,0 +1,78 @@
+/** Google Fonst */
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@1,600&display=swap');
+
+:root {
+    --text: #dbdbdb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 90vh;
+}
+
+
+.imgBox:nth-child(1) {
+    background-image: url("/images/img1.jpg");
+}
+
+.imgBox:nth-child(2) {
+    background-image: url("/images/img2.jpg");
+}
+
+.imgBox:nth-child(3) {
+    background-image: url("/images/img3.jpg");
+}
+
+.imgBox:nth-child(4) {
+    background-image: url("/images/img4.jpg");
+}
+
+.imgBox:nth-child(5) {
+    background-image: url("/images/img5.jpg");
+}
+
+.imgBox {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: .2s ease-in-out;
+}
+
+.imgBox h2 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    color: var(--text);
+    left: 70%;
+    opacity: 0;
+}
+
+.imgBox.active {
+    flex: 5;
+}
+
+.imgBox.active h2 {
+    opacity: 1;
+    transition: .2s ease-in-out;
+}
